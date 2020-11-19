@@ -1,5 +1,7 @@
 <template>
-    <HomePage />
+    <main class="container">
+        <HomePage />
+    </main>
 </template>
 
 <script>
