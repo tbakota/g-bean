@@ -1,10 +1,103 @@
 <template>
-    <div>register</div>
+    <div class="wrapper d-flex">
+        <div class="w-100 p-sm-5 align-self-sm-center">
+            <div class="h1 text-center">Register</div>
+            <form>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label"
+                        >Email address</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            v-model="email"
+                        />
+                    </div>
+                    <small
+                        id="emailHelp"
+                        class="form-text text-muted col-sm-10 offset-sm-2"
+                        >We may share your email with anyone else.</small
+                    >
+                </div>
+                <div class="form-group row">
+                    <label for="displayName" class="col-sm-2 col-form-label"
+                        >Display name</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="displayName"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label"
+                        >Password</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                        />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="confirmPassword" class="col-sm-2 col-form-label"
+                        >Confirm Password</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="confirmPassword"
+                        />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-1">
+                    Submit
+                </button>
+                <button type="button" class="btn btn-info">
+                    Already have an account? Click here!
+                </button>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script>
 export default {
-    name: 'RegisterUser'
+    name: 'RegisterUser',
+    data: function() {
+        return {
+            email: ''
+        };
+    },
+    methods: {
+        submit: function() {
+            console.log(this.email);
+        },
+        checkForm: function(e) {
+            if (this.name && this.age) {
+                return true;
+            }
+
+            this.errors = [];
+
+            if (!this.name) {
+                this.errors.push('Name required.');
+            }
+            if (!this.age) {
+                this.errors.push('Age required.');
+            }
+
+            e.preventDefault();
+        }
+    }
 };
 </script>
 

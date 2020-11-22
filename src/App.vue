@@ -1,19 +1,30 @@
 <template>
     <main class="container">
-        <HomePage />
+        <router-view />
+        <RegisterUser />
     </main>
 </template>
 
 <script>
-import HomePage from './components/HomePage';
+import RegisterUser from './components/RegisterUser';
 
 export default {
     name: 'App',
 
     components: {
-        HomePage
+        RegisterUser
     }
 };
 </script>
 
-<style></style>
+<style>
+html,
+body {
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+}
+.wrapper {
+    min-height: 100vh;
+}
+</style>
