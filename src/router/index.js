@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import HomePage from '../home/HomePage.vue';
+import TasksPage from '../tasks/TasksPage.vue';
 import LoginPage from '../login/LoginPage.vue';
 import RegisterPage from '../register/RegisterPage.vue';
 
@@ -12,8 +12,8 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'Home',
-            component: HomePage,
+            name: 'Tasks',
+            component: TasksPage,
             beforeEnter(to, from, next) {
                 next(true);
             }
@@ -30,7 +30,7 @@ export default new Router({
         }
         // {
         //     path: '*',
-        //     component: HomePage
+        //     component: TasksPage
         // }
     ]
 });

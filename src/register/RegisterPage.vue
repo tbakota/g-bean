@@ -77,7 +77,7 @@
 <script>
 export default {
     name: 'RegisterPage',
-    data: function() {
+    data() {
         return {
             registerForm: {
                 email: '',

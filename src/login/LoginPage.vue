@@ -40,7 +40,7 @@
 <script>
 export default {
     name: 'LoginPage',
-    data: function() {
+    data() {
         return {
             loginForm: {
                 email: '',
@@ -51,7 +51,7 @@ export default {
     methods: {
         submit: function() {
             console.log(this.loginForm);
-            this.$router.push({ name: 'Home' });
+            this.$router.push({ name: 'Tasks' });
         }
     }
 };
