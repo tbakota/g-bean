@@ -15,6 +15,7 @@ export default new Router({
             name: 'Tasks',
             component: TasksPage,
             beforeEnter(to, from, next) {
+                //todo: check if user is logged in/check if can be handled with metadata
                 next(true);
             }
         },
