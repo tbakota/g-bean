@@ -1,19 +1,12 @@
 <template>
     <main class="container">
         <router-view />
-        <RegisterUser />
     </main>
 </template>
 
 <script>
-import RegisterUser from './components/RegisterUser';
-
 export default {
-    name: 'App',
-
-    components: {
-        RegisterUser
-    }
+    name: 'App'
 };
 </script>
 
